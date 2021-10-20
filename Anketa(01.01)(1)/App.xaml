@@ -1,0 +1,15 @@
+﻿<Application x:Class="Anketa_01._01__1_.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Anketa_01._01__1_"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <Style TargetType="Button" x:Key="GelButton" >
+
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Background" Value="Fuchsia"/>
+        </Style>
+        
+    </Application.Resources>
+</Application>

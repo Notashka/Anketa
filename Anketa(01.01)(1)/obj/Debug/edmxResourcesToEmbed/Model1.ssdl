@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище WPF_test_41PModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="auth">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="login" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="role" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="genders">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="gender" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="roles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="role" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="traits">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="trait" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="dr" Type="date" Nullable="false" />
+    <Property Name="gender" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="users_to_traits">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_user" Type="int" Nullable="false" />
+    <Property Name="id_trait" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_auth_roles">
+    <End Role="roles" Type="Self.roles" Multiplicity="1" />
+    <End Role="auth" Type="Self.auth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="roles">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="auth">
+        <PropertyRef Name="role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_auth">
+    <End Role="auth" Type="Self.auth" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="users" Type="Self.users" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="auth">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_genders">
+    <End Role="genders" Type="Self.genders" Multiplicity="1" />
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="genders">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="gender" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_to_traits_traits">
+    <End Role="traits" Type="Self.traits" Multiplicity="1" />
+    <End Role="users_to_traits" Type="Self.users_to_traits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="traits">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users_to_traits">
+        <PropertyRef Name="id_trait" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_to_traits_users">
+    <End Role="users" Type="Self.users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="users_to_traits" Type="Self.users_to_traits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users_to_traits">
+        <PropertyRef Name="id_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище WPF_test_41PModelContainer">
+    <EntitySet Name="auth" EntityType="Self.auth" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="genders" EntityType="Self.genders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="roles" EntityType="Self.roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="traits" EntityType="Self.traits" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users_to_traits" EntityType="Self.users_to_traits" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_auth_roles" Association="Self.FK_auth_roles">
+      <End Role="roles" EntitySet="roles" />
+      <End Role="auth" EntitySet="auth" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_auth" Association="Self.FK_users_auth">
+      <End Role="auth" EntitySet="auth" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_genders" Association="Self.FK_users_genders">
+      <End Role="genders" EntitySet="genders" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_to_traits_traits" Association="Self.FK_users_to_traits_traits">
+      <End Role="traits" EntitySet="traits" />
+      <End Role="users_to_traits" EntitySet="users_to_traits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_to_traits_users" Association="Self.FK_users_to_traits_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="users_to_traits" EntitySet="users_to_traits" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
