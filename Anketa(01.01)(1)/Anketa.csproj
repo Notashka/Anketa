@@ -70,6 +70,9 @@
     <Compile Include="genders.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="pages\DLL.xaml.cs">
+      <DependentUpon>DLL.xaml</DependentUpon>
+    </Compile>
     <Compile Include="pages\List.xaml.cs">
       <DependentUpon>List.xaml</DependentUpon>
     </Compile>
@@ -115,6 +118,10 @@
     <Compile Include="users_to_traits.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Page Include="pages\DLL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="pages\List.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -204,6 +211,12 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dllpro\Dllpro.csproj">
+      <Project>{a63ccf85-0a9c-4c04-b9c2-1e53db39ed71}</Project>
+      <Name>Dllpro</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

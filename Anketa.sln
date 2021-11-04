@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anketa", "Anketa(01.01)(1)\Anketa.csproj", "{F06222C9-5B2B-4981-8137-2212FF233B30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dllpro", "Dllpro\Dllpro.csproj", "{A63CCF85-0A9C-4C04-B9C2-1E53DB39ED71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F06222C9-5B2B-4981-8137-2212FF233B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F06222C9-5B2B-4981-8137-2212FF233B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F06222C9-5B2B-4981-8137-2212FF233B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A63CCF85-0A9C-4C04-B9C2-1E53DB39ED71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A63CCF85-0A9C-4C04-B9C2-1E53DB39ED71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A63CCF85-0A9C-4C04-B9C2-1E53DB39ED71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A63CCF85-0A9C-4C04-B9C2-1E53DB39ED71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

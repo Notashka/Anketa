@@ -10,23 +10,23 @@
 
     <Page.Resources>
         <DataTemplate x:Key="DT1" >
-            
+
             <StackPanel>
                 <GroupBox Header="имя">
                     <TextBlock Text="{Binding name}"/>
                 </GroupBox>
                 <GroupBox Header=" дата рождения">
                     <TextBlock Text="{Binding dr, StringFormat={}{0:dd.MM.yyyy}}"/>
-                   
+
                 </GroupBox>
                 <GroupBox Header=" пол">
                     <TextBlock Text="{Binding genders.gender}"/>
-                   
+
                 </GroupBox>
                 <GroupBox Header="качества личности">
-                   
+
                     <ListBox Name="lbTraits" Loaded="lbTraits_Loaded" Uid="{Binding id}"/>
-                   
+
                 </GroupBox>
                 <Button x:Name="Udal" Content="Удалить пользователя" Click="Udal_Click"  Width="200" Margin="5" Uid="{Binding id}" Style="{StaticResource GelButton}"/>
                 <Button x:Name="red" Content="Редактировать пользователя" Click="red_Click"  Width="200" Margin="5" Uid="{Binding id}" Style="{StaticResource GelButton}"/>
@@ -35,20 +35,46 @@
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="397*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0"  Orientation="Horizontal">
             <GroupBox Header="от">
-                <TextBox Name="txtOT" Width="50" Margin="0,0,0,-0.4" Height="18" VerticalAlignment="Top"/>
+                <TextBox Name="txtOT" Width="50" Margin="0,0,0,-0.4" Height="18" VerticalAlignment="Top" PreviewTextInput="tbStart_PreviewTextInput" SelectionChanged="Filter"/>
             </GroupBox>
             <GroupBox Header="до">
-                <TextBox Name="txtDO" Width="50"/>
+                <TextBox Name="txtDO" Width="50" Margin="0,0,0,-0.4" Height="18" VerticalAlignment="Top" PreviewTextInput="tbStart_PreviewTextInput" SelectionChanged="Filter"/>
             </GroupBox>
-            <Button Name="btnGo" Content="Вывести" Click="btnGo_Click" Width="50" Margin="5" Style="{StaticResource GelButton}"/>
-            <Button Name="btnReset" Content="Сброс" Click="btnReset_Click" Width="50" Margin="5" Style="{StaticResource GelButton}"/>
-            <Button Name="btnNaz" Content="Назад" Click="btnNaz_Click" Width="50" Margin="5" Style="{StaticResource GelButton}"/>
+            <GroupBox Header="Выберите пол">
+                <ComboBox x:Name="lbGenderFilter" Height="18" Margin="0,0,0.2,-0.4"  VerticalAlignment="Top" SelectionChanged="Filter"/>
+            </GroupBox>
+            <GroupBox Header="Имя">
+                <TextBox Name="txtNameFilter" Width="70" TextChanged="Filter" Margin="0,0,0,19.6"/>
+            </GroupBox>
+            <!--<StackPanel >-->
+            <!--<Button Name="btnGo" Content="Вывести" Click="btnGo_Click" Width="50" Margin="5" Style="{StaticResource GelButton}"/>-->
+            <Button Name="btnReset" Content="Сброс" Click="btnReset_Click" Width="50" Height="25" Margin="5" Style="{StaticResource GelButton}"/>
+            <!--</StackPanel>-->
+            <GroupBox Header="Записей на странице" >
+                <TextBox x:Name="txtPageCount" TextChanged="txtPageCount_TextChanged" VerticalAlignment="Top" Margin="5,0,0,1"/>
+            </GroupBox>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10">
+                <TextBlock x:Name="txtPrev" Uid="prev" Text="Пред." MouseDown="GoPage_MouseDown"/>
+                <TextBlock x:Name="txt1" Uid="1" Text=" 1 " MouseDown="GoPage_MouseDown"/>
+                <TextBlock x:Name="txt2" Uid="2" Text=" 2 " MouseDown="GoPage_MouseDown"/>
+                <TextBlock x:Name="txt3" Uid="3" Text=" 3 " MouseDown="GoPage_MouseDown"/>
+                <TextBlock x:Name="txt4" Uid="4" Text=" 4 " MouseDown="GoPage_MouseDown"/>
+                <TextBlock x:Name="txt5" Uid="5" Text=" 5 " MouseDown="GoPage_MouseDown"/>
+                <TextBlock x:Name="txtNext" Uid="next" Text="След.." MouseDown="GoPage_MouseDown"/>
+            </StackPanel>
+            <TextBlock x:Name="txtCurentPage"/>
+            <StackPanel>
+                <Button Name="btnNaz" Content="Назад" Click="btnNaz_Click" Width="50" Height="20" Margin="5" Style="{StaticResource GelButton}"/>
+                <Button Name="btnDll" Content="DLL" Click="btnDll_Click" Width="50" Height="20" Margin="5" Style="{StaticResource GelButton}"/>
+                <!--<Button Name="btnVoz" Content="Ср. возраст" Click="btnVoz_Click" Width="90" Height="25" Margin="5" Style="{StaticResource GelButton}"/>
+                <Button Name="btnName" Content="По имени" Click="btnName_Click" Width="90" Height="25" Margin="5" Style="{StaticResource GelButton}"/>-->
+            </StackPanel>
         </StackPanel>
-        <ListBox Name="lbUsersList" ItemTemplate="{StaticResource DT1}" Grid.Row="1"/>
+        <ListBox Name="lbUsersList" ItemTemplate="{StaticResource DT1}" Grid.Row="1" />
     </Grid>
 </Page>
