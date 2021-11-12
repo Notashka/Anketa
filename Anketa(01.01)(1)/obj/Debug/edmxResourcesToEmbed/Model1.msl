@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище WPF_test_41PModelContainer" CdmEntityContainer="Entities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище WPF_test_41PModelContainer" CdmEntityContainer="Entities1">
     <EntitySetMapping Name="auth">
       <EntityTypeMapping TypeName="WPF_test_41PModel.auth">
         <MappingFragment StoreEntitySet="auth">
@@ -62,6 +62,16 @@
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="id_user" ColumnName="id_user" />
           <ScalarProperty Name="id_trait" ColumnName="id_trait" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usersimage">
+      <EntityTypeMapping TypeName="WPF_test_41PModel.usersimage">
+        <MappingFragment StoreEntitySet="usersimage">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="image" ColumnName="image" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

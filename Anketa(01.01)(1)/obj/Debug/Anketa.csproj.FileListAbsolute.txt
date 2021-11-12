@@ -74,3 +74,43 @@ C:\Users\Natasha\Desktop\4 курс\1 семестр (2021)\МДК 01.01 Мух�
 C:\Users\Natasha\Desktop\4 курс\1 семестр (2021)\МДК 01.01 Мухин (разработка прог модулей)\Test\Anketa(01.01)(1)\bin\Debug\Dllpro.dll
 C:\Users\Natasha\Desktop\4 курс\1 семестр (2021)\МДК 01.01 Мухин (разработка прог модулей)\Test\Anketa(01.01)(1)\bin\Debug\Dllpro.pdb
 C:\Users\Natasha\Desktop\4 курс\1 семестр (2021)\МДК 01.01 Мухин (разработка прог модулей)\Test\Anketa(01.01)(1)\obj\Debug\pages\DLL.baml
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\bin\Debug\Anketa(01.01)(1).exe.config
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\bin\Debug\Anketa(01.01)(1).exe
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\bin\Debug\Anketa(01.01)(1).pdb
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\bin\Debug\Dllpro.dll
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\bin\Debug\EntityFramework.dll
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\bin\Debug\EntityFramework.SqlServer.dll
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\bin\Debug\Dllpro.pdb
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\bin\Debug\EntityFramework.xml
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\bin\Debug\EntityFramework.SqlServer.xml
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\bin\Debug\ru\EntityFramework.resources.dll
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\Anketa.csprojAssemblyReference.cache
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\pages\DLL.g.cs
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\pages\List.g.cs
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\MainWindow.g.cs
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\pages\info.g.cs
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\pages\login.g.cs
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\pages\menu.g.cs
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\pages\izmena.g.cs
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\pages\registr.g.cs
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\App.g.cs
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\Anketa(01.01)(1)_Content.g.cs
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\Anketa(01.01)(1)_MarkupCompile.cache
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\Anketa(01.01)(1)_MarkupCompile.lref
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\App.baml
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\pages\DLL.baml
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\pages\List.baml
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\MainWindow.baml
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\pages\info.baml
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\pages\login.baml
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\pages\menu.baml
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\pages\izmena.baml
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\pages\registr.baml
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\Anketa(01.01)(1).g.resources
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\Anketa_01._01__1_.Properties.Resources.resources
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\Anketa.csproj.GenerateResource.cache
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\Anketa.csproj.CoreCompileInputs.cache
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\Anketa.csproj.CopyComplete
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\Anketa(01.01)(1).exe
+X:\4\МДК 01.01 WPF Мухин\WPF\Anketa(01.01)(1)\obj\Debug\Anketa(01.01)(1).pdb

@@ -13,10 +13,10 @@ namespace Anketa_01._01__1_
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities : DbContext
+    public partial class Entities1 : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public Entities1()
+            : base("name=Entities1")
         {
         }
     
@@ -32,5 +32,6 @@ namespace Anketa_01._01__1_
         public virtual DbSet<traits> traits { get; set; }
         public virtual DbSet<users> users { get; set; }
         public virtual DbSet<users_to_traits> users_to_traits { get; set; }
+        public virtual DbSet<usersimage> usersimage { get; set; }
     }
 }
